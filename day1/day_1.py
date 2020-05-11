@@ -1,4 +1,5 @@
 # 练习1华氏转摄氏 C = (F - 32) / 1.8
+
 # f = float(input('please input f\n'))
 # c = (f - 32) / 1.8
 # print('输入的华氏度为： %.1f\n对应的摄氏度是： %.1f'%(f, c))
