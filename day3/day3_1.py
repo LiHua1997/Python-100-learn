@@ -1,73 +1,45 @@
-# # 练习1：输入一个正整数判断是不是素数。
-# # 提示：素数指的是只能被1和自身整除的大于1的整数
-# # 解法1：
-# number = int(input('请输入一个整数\n'))
-# is_prime = True
-# for i in range(2, number):
-#     if number % i == 0:
-#         is_prime = False
-#         break
-# if is_prime:
-#     print('是素数')
+# 英寸厘米互换
+# value = float(input('请输入长度： '))
+# unit = input('请输入单位： ')
+# if unit == 'in' or unit == '英寸':
+#     print('%.1f英寸 = %.1f厘米' % (value, value * 2.54))
+# elif unit == 'cm' or unit == '厘米':
+#     print('%.1f厘米 = %.1f英寸' % (value, value / 2.54))
 # else:
-#     print('不是素数')
-#
-# # 解法2：
-# from math import sqrt
-#
-# num = int(input('请输入一个正整数： '))
-# end = int(sqrt(num))
-# is_prime = True
-# for i in range(2, end + 1):
-#     if num % i == 0:
-#         is_prime = False
-#         break
-#
-# if is_prime and num != 1:
-#     print('%d是素数' % num)
+#     print('请输入正确的数据')
+
+# 百分制转化成等级制
+"""
+如果输入的成绩在90分以上（含90分）输出A；
+80分-90分（不含90分）输出B；
+70分-80分（不含80分）输出C；
+60分-70分（不含70分）输出D；
+60分以下输出E。
+"""
+# score = float(input('请输入分数： '))
+# if score >= 90:
+#     grade = 'A'
+# elif score >= 80:
+#     grade = 'B'
+# elif score >= 70:
+#     grade = 'C'
+# elif score >= 60:
+#     grade = 'D'
+# elif score > 0:
+#     grade = 'E'
 # else:
-#     print('%d不是素数' % num)
+#     print('请输入正确的数据')
+#
+# print('您的分数是： %.1f\n您的等级是: % s' % (score, grade))
 
-# 练习2 输入两个正整数，计算它们的最大公约数和最小公倍数。
-"""
-提示：两个数的最大公约数是两个数的公共因子中最大的那个数；两个数的最小公倍数则是能够同时被两个数整除的最小的那个数。
-"""
-# a = int(input('请输入正整数a： '))
-# b = int(input('请输入正整数b： '))
-# if a > b:
-#     a, b = b, a
-# for i in range(a, 0, -1):
-#     if a % i == 0 and b % i == 0:
-#         print("%d, %d最大公约数是：%d" %(a, b, i))
-#         print("%d, %d最小公倍数是：%d" %(a, b, a * b // i)) #取模似乎没必要
-#         break
+# 练习3：输入三条边长，如果能构成三角形就计算周长和面积。
 
-# 练习3 打印三角形
-# for i in range(1, 6):
-#     print('*' * i)
-# print()
-# for i in range(1, 6):
-#     print(' ' * (5 - i) + '*' * i)
-# print()
-# for i in range(1, 10, 2):
-#     blank = int((9 - i) / 2)
-#     print(blank * ' ' + '*' * i + blank * ' ')
-# print()
-row = 5
-for i in range(row):
-    for _ in range(i + 1):
-        print("*", end='')
-    print()
-for i in range(row):
-    for j in range(row):
-        if j < row - i - 1:
-            print(" ", end="")
-        else:
-            print("*", end='')
-    print()
-for i in range(row):
-    for _ in range(row - i - 1):
-        print(" ", end='')
-    for _ in range(2 * i + 1):
-        print("*", end='')
-    print()
+a = float(input('a = '))
+b = float(input('b = '))
+c = float(input('c = '))
+if a + b > c and b + c > a and a + c > b:
+    p = (a + b + c) / 2  # 海伦公式
+    area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+    print('\n三角形的周长是： %.1f\n三角形的面积是： %.1f' % (2 * p, area))
+else:
+    print('\n不是三角形')
