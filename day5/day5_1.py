@@ -13,7 +13,7 @@ Author: St
 
 first = 1
 mid = 1
-for i in(range(1,20)):
+for i in range(1,21):
     if i <= 2:
         print("1")
     else:
@@ -21,3 +21,9 @@ for i in(range(1,20)):
         first = mid
         mid = new
         print(new)
+# 答案：
+# a = 0
+# b = 1
+# for _ in range(20):
+#     a, b = b, a+b
+#     print(a)
