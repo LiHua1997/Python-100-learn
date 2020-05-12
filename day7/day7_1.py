@@ -1,21 +1,28 @@
-#4个空瓶换1瓶，买了7瓶
-total = 0
-empty = 0
-borow = 0
-change = 0
-num = int(input('买几瓶： '))
+"""
+跑马灯
+
+Version = 0.1
+Author = St
+
+"""
+
+import os
+import time
 
 
-
-for _ in range(num):
-    total += 1
-    empty += 1
-    if empty == 4:
-        total += 1
-        empty -= 4
-        change += 1
-
+def light(content):
+    """滚动播出content的内容"""
+    while True:
+        print(content)
+        time.sleep(0.2)
+        os.system('clear')
+        content = content[1:] + content[0]
 
 
-print("总共可获得%d瓶，其中兑换了%d瓶，借了%d瓶，剩%d个空瓶子"%(total,change,borow,empty))
+def main():
+    content = input('输入跑马灯内容')
+    light(content)
 
+
+if __name__ == '__main__':
+    main()
