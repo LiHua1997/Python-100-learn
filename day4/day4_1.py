@@ -54,7 +54,7 @@ while a % b != 0:
 print(b)
 # 练习3 打印三角形
 # for i in range(1, 6):
-#     print('*' * i)
+#     print('*' * i
 # print()
 # for i in range(1, 6):
 #     print(' ' * (5 - i) + '*' * i)
