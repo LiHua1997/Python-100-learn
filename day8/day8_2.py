@@ -51,12 +51,15 @@ class Point(object):
         dy = self._y - other_point._y
         return math.sqrt(dx ** 2 + dy ** 2)
 
+    def __str__(self):
+        return '(%s,%s)'%(str(self._x), str(self._y))
 
 
 
 def main():
     point_a = Point(1, 1)
     point_b = Point(3, 3)
+    print(point_a)
     print(point_a.move_to(3, 3))
     print(point_a.move_by(1,1))
     print(point_a.distance(point_b))
