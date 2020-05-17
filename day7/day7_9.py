@@ -20,7 +20,7 @@ def set_chess(num, init_board):
         print('玩家2：o')
         pos = input('请输入位置')
         os.system('clear')
-        current_board[pos] = 'o'b
+        current_board[pos] = 'o'
     return current_board
 
 def main():
